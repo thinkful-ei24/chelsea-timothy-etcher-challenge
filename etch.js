@@ -16,7 +16,7 @@ $(() => {
 
 // ===============================
 // Code below is to automate grid creation
-// You can ignore this! But feel free to 
+// You can ignore this!
 // ===============================
 function createRow(cellCount) {
   let row = '<div class="row">';
