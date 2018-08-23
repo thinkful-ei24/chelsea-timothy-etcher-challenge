@@ -7,7 +7,6 @@
 "use strict";
 
 // Add Event Listeners here:
-
 const activateCell = event => {
   const activatedCell = $(event.target);
   activatedCell.addClass("active");
@@ -15,7 +14,6 @@ const activateCell = event => {
 
 const clearGrid = () => {
   createAndPlaceRows(8);
-  $(".cell").hover(activateCell);
 };
 
 // When DOM is ready:
@@ -23,7 +21,7 @@ $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
-  $(".cell").hover(activateCell);
+  $(".grid").on("mouseover", ".cell", activateCell);
   $("button").click(clearGrid);
 });
 
