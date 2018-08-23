@@ -1,11 +1,31 @@
+// permanently apply 'active' class to grid cell when user hovers over cell
+// when user clicks 'clear grid' button, grid should clear all cells using createAndPlaceRows function
+
+
+//apply listener to every 'cell' class 
+// every time user hovers over cell, listener is applied
+
 // Add Event Listeners here:
 
+const activateCell = event => {
+  const activatedCell = $(event.target);
+  activatedCell.addClass('active');
+}
+
+const clearGrid = () => {
+  createAndPlaceRows(8);
+  $('.cell').hover(activateCell);
+}
 
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
+  
 
   // Bind your event listeners here:
+  $('.cell').hover(activateCell);
+  $('button').click(clearGrid);
+
 });
 
 
