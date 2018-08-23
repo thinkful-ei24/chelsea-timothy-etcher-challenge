@@ -7,14 +7,12 @@
 "use strict";
 
 // Add Event Listeners here:
-const activateCell = event => {
-  const activatedCell = $(event.target);
-  activatedCell.addClass("active");
-};
 
-const clearGrid = () => {
-  createAndPlaceRows(8);
-};
+// Add class to cell on hover
+const activateCell = event => $(event.target).addClass("active");
+
+// Clear grid on click using createAndPlaceRows function
+const clearGrid = () => createAndPlaceRows(8);
 
 // When DOM is ready:
 $(() => {
