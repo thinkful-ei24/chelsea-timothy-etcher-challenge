@@ -20,6 +20,7 @@ $(() => {
 
   // Bind your event listeners here:
   $(".grid").on("mouseover", ".cell", activateCell);
+
   $("button").click(clearGrid);
 });
 
